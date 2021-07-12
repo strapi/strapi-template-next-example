@@ -122,7 +122,7 @@ async function importPosts() {
   return Promise.all(
     posts.map((post) => {
       const files = {
-        image: getFileData(`${post.slug}.jpg`),
+        coverImage: getFileData(`${post.slug}.jpg`),
       };
       return createEntry({ model: "post", entry: post, files });
     })
